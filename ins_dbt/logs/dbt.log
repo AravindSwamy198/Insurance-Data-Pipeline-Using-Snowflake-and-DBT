@@ -1,0 +1,149 @@
+[0m21:11:55.207018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0DCC89700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0DCC88AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0DCC8B140>]}
+
+
+============================== 21:11:55.226046 | d870bc06-ab1f-4891-a5c9-731ad8696edc ==============================
+[0m21:11:55.226046 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:11:55.228058 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\aravi\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\aravi\\insurance-data-pipeline\\ins_dbt\\logs'}
+[0m21:11:58.239843 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m21:11:58.240844 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m21:11:58.241844 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m21:11:58.653495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd870bc06-ab1f-4891-a5c9-731ad8696edc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0F77019D0>]}
+[0m21:11:58.735989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd870bc06-ab1f-4891-a5c9-731ad8696edc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0F7701400>]}
+[0m21:11:58.737110 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m21:11:59.212833 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m21:11:59.215841 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:11:59.217454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd870bc06-ab1f-4891-a5c9-731ad8696edc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0DC54C500>]}
+[0m21:12:03.941599 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ins_dbt.stg_claims' (models\stg_claims.sql) depends on a source named 'snowflake.CLAIMS' which was not found
+[0m21:12:03.942597 [debug] [MainThread]: Command `dbt run` failed at 21:12:03.942597 after 9.09 seconds
+[0m21:12:03.943599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0DAAE9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0F77F4980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0F775BF80>]}
+[0m21:12:03.944599 [debug] [MainThread]: Flushing usage events
+[0m21:12:05.051889 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:13:15.507170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D607DA5F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6054C30E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D605C4AA80>]}
+
+
+============================== 21:13:15.515472 | bb6963a1-956d-4c7a-944d-fd2311723778 ==============================
+[0m21:13:15.515472 [info ] [MainThread]: Running with dbt=1.11.2
+[0m21:13:15.517470 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\aravi\\.dbt', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\aravi\\insurance-data-pipeline\\ins_dbt\\logs'}
+[0m21:13:16.803957 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m21:13:16.804955 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m21:13:16.804955 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m21:13:17.107705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D607E18860>]}
+[0m21:13:17.201261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D62065CB60>]}
+[0m21:13:17.202779 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m21:13:17.755623 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m21:13:17.757503 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:13:17.758613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D622985400>]}
+[0m21:13:19.389954 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ins_dbt.example
+[0m21:13:19.401237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D607E1A900>]}
+[0m21:13:19.481991 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aravi\insurance-data-pipeline\ins_dbt\target\manifest.json
+[0m21:13:19.486508 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aravi\insurance-data-pipeline\ins_dbt\target\semantic_manifest.json
+[0m21:13:19.538380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D622E5D610>]}
+[0m21:13:19.538888 [info ] [MainThread]: Found 2 models, 1 source, 522 macros
+[0m21:13:19.539899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D622E6C140>]}
+[0m21:13:19.543265 [info ] [MainThread]: 
+[0m21:13:19.544232 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:13:19.545290 [info ] [MainThread]: 
+[0m21:13:19.546231 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:13:19.551863 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_insurance'
+[0m21:13:24.177702 [debug] [ThreadPool]: Using snowflake connection "list_insurance"
+[0m21:13:24.177702 [debug] [ThreadPool]: On list_insurance: show terse schemas in database insurance
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "ins_dbt", "target_name": "dev", "connection_name": "list_insurance"} */
+[0m21:13:24.178800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:26.591226 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.413 seconds
+[0m21:13:26.596758 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_insurance_analytics'
+[0m21:13:26.609276 [debug] [ThreadPool]: Using snowflake connection "list_insurance_analytics"
+[0m21:13:26.610396 [debug] [ThreadPool]: On list_insurance_analytics: show objects in insurance.analytics
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "ins_dbt", "target_name": "dev", "connection_name": "list_insurance_analytics"} */;
+[0m21:13:26.610396 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:13:28.094287 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.483 seconds
+[0m21:13:28.099896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6227CC6B0>]}
+[0m21:13:28.153091 [debug] [Thread-2 (]: Began running node model.ins_dbt.stg_claims
+[0m21:13:28.153091 [info ] [Thread-2 (]: 1 of 2 START sql view model analytics.stg_claims ............................... [RUN]
+[0m21:13:28.154384 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.ins_dbt.stg_claims'
+[0m21:13:28.154384 [debug] [Thread-2 (]: Began compiling node model.ins_dbt.stg_claims
+[0m21:13:28.160481 [debug] [Thread-2 (]: Writing injected SQL for node "model.ins_dbt.stg_claims"
+[0m21:13:28.164729 [debug] [Thread-2 (]: Began executing node model.ins_dbt.stg_claims
+[0m21:13:28.186225 [debug] [Thread-2 (]: Writing runtime sql for node "model.ins_dbt.stg_claims"
+[0m21:13:28.189223 [debug] [Thread-2 (]: Using snowflake connection "model.ins_dbt.stg_claims"
+[0m21:13:28.190223 [debug] [Thread-2 (]: On model.ins_dbt.stg_claims: create or replace   view insurance.analytics.stg_claims
+  
+  
+  
+  
+  as (
+    with raw as (
+    select
+        claim_id,
+        customer_id,
+        to_date(date) as claim_date,
+        amount::float as amount,
+        claim_type,
+        is_fraud::boolean as is_fraud
+    from insurance.raw.CLAIMS
+)
+select * from raw
+  )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "ins_dbt", "target_name": "dev", "node_id": "model.ins_dbt.stg_claims"} */;
+[0m21:13:28.191224 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:13:29.375303 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.184 seconds
+[0m21:13:29.397050 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D607707440>]}
+[0m21:13:29.398050 [info ] [Thread-2 (]: 1 of 2 OK created sql view model analytics.stg_claims .......................... [[32mSUCCESS 1[0m in 1.24s]
+[0m21:13:29.400047 [debug] [Thread-2 (]: Finished running node model.ins_dbt.stg_claims
+[0m21:13:29.401206 [debug] [Thread-2 (]: Began running node model.ins_dbt.claims_summary
+[0m21:13:29.402045 [info ] [Thread-2 (]: 2 of 2 START sql view model analytics.claims_summary ........................... [RUN]
+[0m21:13:29.402613 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ins_dbt.stg_claims, now model.ins_dbt.claims_summary)
+[0m21:13:29.403658 [debug] [Thread-2 (]: Began compiling node model.ins_dbt.claims_summary
+[0m21:13:29.406613 [debug] [Thread-2 (]: Writing injected SQL for node "model.ins_dbt.claims_summary"
+[0m21:13:29.408611 [debug] [Thread-2 (]: Began executing node model.ins_dbt.claims_summary
+[0m21:13:29.412277 [debug] [Thread-2 (]: Writing runtime sql for node "model.ins_dbt.claims_summary"
+[0m21:13:29.414816 [debug] [Thread-2 (]: Using snowflake connection "model.ins_dbt.claims_summary"
+[0m21:13:29.414816 [debug] [Thread-2 (]: On model.ins_dbt.claims_summary: create or replace   view insurance.analytics.claims_summary
+  
+  
+  
+  
+  as (
+    select
+    date_trunc('month', claim_date) as month,
+    claim_type,
+    count(*) as claims_count,
+    sum(amount) as total_amount,
+    sum(case when is_fraud then 1 else 0 end) as fraud_count
+from insurance.analytics.stg_claims
+group by 1,2
+order by 1
+  )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "ins_dbt", "target_name": "dev", "node_id": "model.ins_dbt.claims_summary"} */;
+[0m21:13:29.654594 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.239 seconds
+[0m21:13:29.658590 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb6963a1-956d-4c7a-944d-fd2311723778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6235ACAA0>]}
+[0m21:13:29.658590 [info ] [Thread-2 (]: 2 of 2 OK created sql view model analytics.claims_summary ...................... [[32mSUCCESS 1[0m in 0.25s]
+[0m21:13:29.659966 [debug] [Thread-2 (]: Finished running node model.ins_dbt.claims_summary
+[0m21:13:29.662062 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:13:29.663332 [debug] [MainThread]: Connection 'list_insurance' was left open.
+[0m21:13:29.663332 [debug] [MainThread]: On list_insurance: Close
+[0m21:13:29.778681 [debug] [MainThread]: Connection 'list_insurance_analytics' was left open.
+[0m21:13:29.780571 [debug] [MainThread]: On list_insurance_analytics: Close
+[0m21:13:29.878998 [debug] [MainThread]: Connection 'model.ins_dbt.claims_summary' was left open.
+[0m21:13:29.880951 [debug] [MainThread]: On model.ins_dbt.claims_summary: Close
+[0m21:13:29.992960 [info ] [MainThread]: 
+[0m21:13:29.994959 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 10.45 seconds (10.45s).
+[0m21:13:29.996958 [debug] [MainThread]: Command end result
+[0m21:13:30.016289 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aravi\insurance-data-pipeline\ins_dbt\target\manifest.json
+[0m21:13:30.018241 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aravi\insurance-data-pipeline\ins_dbt\target\semantic_manifest.json
+[0m21:13:30.023831 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aravi\insurance-data-pipeline\ins_dbt\target\run_results.json
+[0m21:13:30.023831 [info ] [MainThread]: 
+[0m21:13:30.024830 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:13:30.025829 [info ] [MainThread]: 
+[0m21:13:30.026829 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m21:13:30.027829 [debug] [MainThread]: Command `dbt run` succeeded at 21:13:30.027829 after 14.79 seconds
+[0m21:13:30.028829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6082B7830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6076DD910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6076DE0F0>]}
+[0m21:13:30.028829 [debug] [MainThread]: Flushing usage events
+[0m21:13:30.632962 [debug] [MainThread]: An error was encountered while trying to flush usage events

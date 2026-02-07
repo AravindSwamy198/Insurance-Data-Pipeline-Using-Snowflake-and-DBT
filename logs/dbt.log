@@ -1,0 +1,106 @@
+[0m19:45:31.680956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285634FDAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002856376E690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028563FE23F0>]}
+
+
+============================== 19:45:31.687443 | a6ee6d02-aa84-45f8-ab87-01c2315d046d ==============================
+[0m19:45:31.687443 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:45:31.688441 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\aravi\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init ins_dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:45:31.707954 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\aravi\.dbt
+[0m19:45:31.710188 [debug] [MainThread]: Starter project path: C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m19:45:31.734582 [info ] [MainThread]: 
+Your new dbt project "ins_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:45:31.736008 [info ] [MainThread]: Setting up your profile.
+[0m19:45:55.715421 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:45:55.715421 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:45:55.716461 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:00:00.748329 [error] [MainThread]: Encountered an error:
+
+[0m20:00:00.753256 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m20:00:00.755252 [debug] [MainThread]: Command `dbt init` failed at 20:00:00.755252 after 869.22 seconds
+[0m20:00:00.757251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002856426A870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002857E6212E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002857E41A780>]}
+[0m20:00:00.758251 [debug] [MainThread]: Flushing usage events
+[0m20:00:01.305303 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:00:21.162741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF7093A780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF6E00A0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF715389E0>]}
+
+
+============================== 20:00:21.167183 | 7df7a00f-c130-4505-bddd-8aa192541370 ==============================
+[0m20:00:21.167183 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:00:21.168183 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\aravi\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt init ins_dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:00:21.183182 [info ] [MainThread]: A project called ins_dbt already exists here.
+[0m20:00:21.184197 [debug] [MainThread]: Command `dbt init` succeeded at 20:00:21.184197 after 0.17 seconds
+[0m20:00:21.185185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF7093A780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF7187C7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF70FCFB30>]}
+[0m20:00:21.185185 [debug] [MainThread]: Flushing usage events
+[0m20:00:22.303738 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:25:36.262242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B606868B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B606868C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B606868D40>]}
+
+
+============================== 20:25:36.276072 | b21a69e7-5ae3-47c3-8353-ce1edf614fa4 ==============================
+[0m20:25:36.276072 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:25:36.279070 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\aravi\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init ins_dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:25:36.334253 [debug] [MainThread]: Starter project path: C:\Users\aravi\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m20:25:36.355774 [info ] [MainThread]: 
+Your new dbt project "ins_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:25:36.357778 [info ] [MainThread]: Setting up your profile.
+[0m20:25:40.465339 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:25:40.465339 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:25:40.465339 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:34:50.142780 [info ] [MainThread]: Profile ins_dbt written to C:\Users\aravi\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:34:50.147783 [debug] [MainThread]: Command `dbt init` succeeded at 20:34:50.146778 after 554.11 seconds
+[0m20:34:50.148779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B606CCEF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B61FD5E1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B6211E93A0>]}
+[0m20:34:50.148779 [debug] [MainThread]: Flushing usage events
+[0m20:34:50.885377 [debug] [MainThread]: An error was encountered while trying to flush usage events
